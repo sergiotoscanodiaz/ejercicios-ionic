@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ejercicio02</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <p>Realiza un conversor de unidades de medida que pueda pasar una distancia a metros, a
+    centímetros y a pulgadas. La interfaz se deja a criterio del alumno.
+    1 pulgada = 2.54 centímetros = 0.0254 metros</p>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>Metros</ion-label>
+            <ion-input color="light" [(ngModel)]="metros" (keyup)="convierteMetros()">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>Centímetros</ion-label>
+            <ion-input color="light"[(ngModel)]="centimetros"
+              (keyup)="covierteCentimetrosA()"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>Pulgadas</ion-label>
+            <ion-input color="light"[(ngModel)]="pulgadas"
+              (keyup)="conviertePulgadas()"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+</ion-content>

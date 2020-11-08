@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ejercicio04</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <p>Amplía el programa anterior de tal forma que se puedan añadir productos al carrito,
+    especificando el nombre del producto, su precio unitario y el número de unidades que se
+    quieren añadir.</p>
+
+  <ion-list>
+    <ion-item *ngFor="let cart of carts">
+      <ion-label>
+        <h3>Item: <b>{{  cart.item }} </b> </h3>
+        <h3>Price: {{  cart.price }} €</h3>
+        <h3>Quantity: {{  cart.quantity }} </h3>
+        <h2>Subtotal: <b>{{ cart.price *  cart.quantity}} €</b></h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label>Insert item:</ion-label>
+    <ion-input (keyup.enter)="insertItem()" [(ngModel)]="inputItem">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Insert price:</ion-label>
+    <ion-input (keyup.enter)="insertPrice()" [(ngModel)]="inputPrice">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Insert quantity:</ion-label>
+    <ion-input (keyup.enter)="insertQuantity()" [(ngModel)]="inputQuantity">
+    </ion-input>
+  </ion-item>
+
+</ion-content>

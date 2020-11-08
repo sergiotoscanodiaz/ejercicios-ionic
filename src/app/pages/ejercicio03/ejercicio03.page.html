@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ejercicio03</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <p>Muestra el contenido del carrito de la compra. El contenido del carrito se proporciona en el
+    archivo cart.json. Para cada línea del carrito, se debe mostrar el nombre del producto, su
+    precio unitario, la cantidad y el subtotal (precio unitario multiplicado por la cantidad). Al final se
+    debe mostrar el importe total del carrito de la compra.</p>
+
+    <ion-list>
+      <ion-item *ngFor="let cart of carts">
+        <ion-label>
+          <h3>Item: <b>{{  cart.item }} </b> </h3>
+          <h3>Price: {{  cart.price }} €</h3>
+          <h3>Quantity: {{  cart.quantity }} </h3>
+          <h2>Subtotal: <b>{{ cart.price *  cart.quantity}} €</b></h2>   
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    
+</ion-content>

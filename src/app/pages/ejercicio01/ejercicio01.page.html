@@ -6,5 +6,23 @@
 
 <ion-content class="ion-padding">
 
+  <ion-item>
+    <ion-label position="floating">Valor mínimo</ion-label>
+    <ion-input [(ngModel)]="minValue"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Valor máximo</ion-label>
+    <ion-input [(ngModel)]="maxValue"></ion-input>
+  </ion-item>
+
+  <ion-button
+  *ngIf="+maxValue > +minValue"
+    (click)="generateNumber()"
+    expand="full">
+    Genera número
+  </ion-button>
+      
+  <h1>{{ randomNumber }}</h1>
   
 </ion-content>
